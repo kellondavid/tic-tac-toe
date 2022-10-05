@@ -23,11 +23,12 @@ body {
 .board {
   background-color: #829460;
   display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 120px 120px 120px;
+  grid-template-rows: 120px 120px 120px;
   width: 100%;
   justify-content: center;
   align-self: center;
+  justify-self: center;
   flex-grow: 1;
 }
 
