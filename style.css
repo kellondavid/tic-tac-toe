@@ -2,25 +2,84 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Indie Flower", sans-serif;
 }
 
-.body {
+body {
   height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  background-color: #674747;
+  font-size: 4rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #eeeeee;
 }
 
 .board {
-  background-color: black;
+  background-color: #829460;
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
   width: 100%;
   justify-content: center;
+  align-self: center;
+  flex-grow: 1;
 }
 
 .squares {
-  background-color: white;
-  border-bottom: 3px solid black;
-  border-right: 3px solid black;
+  background-color: #829460;
+  border-bottom: 3px solid #674747;
+  border-right: 3px solid #674747;
+  cursor: pointer;
+}
+
+.squaresRight {
+  border-right: none;
+}
+
+.squaresBottom {
+  border-bottom: none;
+}
+
+.playerTurn,
+.restart {
+  background-color: #829460;
+  text-align: center;
+  color: #674747;
+  font-size: 2rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+button {
+  border-radius: 99em;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  background-color: #d6cda4;
+  font-size: 1.2rem;
+  color: #674747;
+}
+
+.footer {
+  text-align: center;
+  background-color: #eee3cb;
+  min-width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #967e76;
+  font-size: 1.5rem;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg);
+}
+
+.fa-github {
+  color: #967e76;
+  transition: transform 0.3s ease-in-out;
 }
