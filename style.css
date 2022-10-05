@@ -39,6 +39,10 @@ body {
   cursor: pointer;
 }
 
+.squares:hover {
+  background-color: #967e76;
+}
+
 .squaresRight {
   border-right: none;
 }
