@@ -66,6 +66,11 @@ button {
   color: #674747;
 }
 
+button:hover {
+  background-color: #d7c0ae;
+  color: black;
+}
+
 .footer {
   text-align: center;
   background-color: #eee3cb;
