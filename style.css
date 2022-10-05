@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.body {
+  height: 100vh;
+  display: grid;
+}
+
+.board {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  width: 100%;
+  justify-content: center;
+}
+
+.squares {
+  background-color: white;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+}
