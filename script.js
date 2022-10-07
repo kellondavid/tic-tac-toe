@@ -1,18 +1,14 @@
-// Player sign assignment function
-const player = (sign) => {
-  this.sign = sign;
-
-  const createPlayer = () => {
-    return sign;
-  };
-
-  return { createPlayer };
-};
-
 // Game board
-const gameBoard = () => {
-  const gameField = document.querySelectorAll("data-cell");
-};
+const gameBoard = (() => {
+  const gameField = document.querySelectorAll(".squares");
+  gameField.forEach((square) => {
+    square.addEventListener("click", handleClick, { once: true });
+  });
+  function handleClick(e) {
+    console.log("check");
+  }
+  console.log(gameField);
+})();
 
 // Check winner
 const winCombos = [
