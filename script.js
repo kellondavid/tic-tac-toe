@@ -1,3 +1,6 @@
+// Globals
+let playerDisplay = document.querySelector(".playerTurn")
+playerDisplay.textContent = "Player X's turn!"
 // Game board
 const gameBoard = (() => {
   const gameField = document.querySelectorAll(".squares");
@@ -11,11 +14,13 @@ const gameBoard = (() => {
     if (currentPlayer === "x") {
       currentPlayer = "o"
       square.textContent = "X"
-      console.log(currentPlayer)
+      square.classList.add("xClass")
+      playerDisplay.textContent = "Player O's turn!"
     }else if (currentPlayer === "o") {
       currentPlayer = "x"
       square.textContent = "O"
-      console.log(currentPlayer)
+      square.classList.add("oClass")
+      playerDisplay.textContent = "Player X's turn!"
     }
   }
 })();
@@ -31,6 +36,7 @@ const winCombos = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
 
 // Restart
 const restartBtn = document.getElementById("restart");
