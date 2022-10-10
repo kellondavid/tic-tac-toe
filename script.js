@@ -4,10 +4,20 @@ const gameBoard = (() => {
   gameField.forEach((square) => {
     square.addEventListener("click", handleClick, { once: true });
   });
+  let currentPlayer = "x"
+  
   function handleClick(e) {
-    console.log("check");
+    const square = e.target
+    if (currentPlayer === "x") {
+      currentPlayer = "o"
+      square.textContent = "X"
+      console.log(currentPlayer)
+    }else if (currentPlayer === "o") {
+      currentPlayer = "x"
+      square.textContent = "O"
+      console.log(currentPlayer)
+    }
   }
-  console.log(gameField);
 })();
 
 // Check winner

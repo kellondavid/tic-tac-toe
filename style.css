@@ -37,6 +37,10 @@ body {
   border-bottom: 3px solid #674747;
   border-right: 3px solid #674747;
   cursor: pointer;
+  font-size: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .squares:hover {
