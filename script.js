@@ -22,6 +22,7 @@ const gameBoard = (() => {
     } else if (currentPlayer === "O") {
       currentPlayer = "X";
       prevPlayer = "O";
+      this.style.color = "white";
       square.textContent = "O";
       square.classList.add(currentPlayer);
       playerDisplay.textContent = "Player X's turn!";
@@ -31,7 +32,7 @@ const gameBoard = (() => {
       gameField.forEach((square) => {
         square.removeEventListener("click", handleClick);
       })
-    }
+    } 
   }
   
   // Check winner
