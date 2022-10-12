@@ -28,13 +28,15 @@ const gameBoard = (() => {
       playerDisplay.textContent = "Player X's turn!";
     }
     if (checkWin(currentPlayer)) {
-      playerDisplay.textContent = "Player " + prevPlayer + " won!"
+      playerDisplay.textContent = "Player " + prevPlayer + " won!";
       gameField.forEach((square) => {
         square.removeEventListener("click", handleClick);
-      })
-    } 
+      });
+    } else if (checkDraw()) {
+      playerDisplay.textContent = "It's a draw!";
+    }
   }
-  
+
   // Check winner
   const winCombos = [
     [0, 1, 2],
@@ -52,6 +54,13 @@ const gameBoard = (() => {
       return combinations.every((index) => {
         return gameField[index].classList.contains(currentPlayer);
       });
+    });
+  }
+
+  //Check draw
+  function checkDraw() {
+    return [...gameField].every((square) => {
+      return square.classList.contains("X") || square.classList.contains("O");
     });
   }
 })();
